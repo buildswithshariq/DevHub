@@ -1,0 +1,23 @@
+<svg width="800" height="250" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Code Bracket Icon -->
+  <g transform="translate(60, 50)">
+    <!-- Left Bracket (Matte Maroon) -->
+    <path d="M 60 20 L 10 75 L 60 130" fill="none" stroke="#80202A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Center Slash (Dark Charcoal) -->
+    <path d="M 100 10 L 60 140" fill="none" stroke="#444444" stroke-width="18" stroke-linecap="round" />
+    
+    <!-- Right Bracket (Matte Maroon) -->
+    <path d="M 100 20 L 150 75 L 100 130" fill="none" stroke="#80202A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- DevHub Typography -->
+  <!-- 'Dev' in Crisp Platinum White -->
+  <text x="270" y="155" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="110" font-weight="800" fill="#F3F4F6" letter-spacing="-3">Dev</text>
+  
+  <!-- 'Hub' in Matte Maroon -->
+  <text x="475" y="155" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="110" font-weight="800" fill="#80202A" letter-spacing="-3">Hub</text>
+  
+  <!-- Tagline -->
+  <text x="275" y="200" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="600" fill="#888899" letter-spacing="6">ENGINEERING THE FUTURE</text>
+</svg>

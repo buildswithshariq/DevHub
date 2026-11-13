@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --app-bg: #000000;
+  --app-surface: #08080a;
+  --app-surface-elevated: #111115;
+  --app-card-border: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #000000 !important;
+  color: #f4f4f6;
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Luxury Matte Black & Matte Maroon Design System Utilities */
+.bg-matte-dark {
+  background-color: #000000;
+}
+
+.bg-matte-surface {
+  background-color: #08080a;
+}
+
+.bg-matte-elevated {
+  background-color: #111114;
+}
+
+.border-matte {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.matte-maroon-button {
+  background: #80202A;
+  border: 1px solid rgba(148, 39, 51, 0.5);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease;
+}
+
+.matte-maroon-button:hover {
+  background: #942733;
+  border-color: rgba(148, 39, 51, 0.8);
+  transform: translateY(-1px);
+}
+
+.metallic-button {
+  background: #111114;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.metallic-button:hover {
+  border-color: rgba(128, 32, 42, 0.6);
+  background: #17171c;
+}
+
+/* 3D Cylindrical Carousel Specific Styles */
+.perspective-stage {
+  perspective: 1600px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.cylinder-ring {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.cylinder-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Dev Hub Intro Loader Instant Screen Lock (Prevents Homepage Flash) */
+html.devhub-intro-active body {
+  overflow: hidden !important;
+}
+
+#devhub-intro-overlay {
+  display: none;
+}
+
+html.devhub-intro-active #devhub-intro-overlay {
+  display: flex !important;
+}

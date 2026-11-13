@@ -1,0 +1,296 @@
+<svg width="2000" height="1000" viewBox="0 0 2000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Base Gradient (Pure Matte Black) -->
+    <radialGradient id="bgVoid" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#09090c" />
+      <stop offset="60%" stop-color="#040405" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Portal Matte Maroon Core Gradient -->
+    <radialGradient id="portalCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9e2e3a" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#80202A" stop-opacity="0.85" />
+      <stop offset="55%" stop-color="#59161d" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#380d12" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#140406" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Plasma Energy Swirl Gradient 1 (Matte Maroon) -->
+    <linearGradient id="plasma1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80202A" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#5c141d" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#2b080d" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Plasma Energy Swirl Gradient 2 (Deep Burgundy) -->
+    <linearGradient id="plasma2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#942733" stop-opacity="0.65" />
+      <stop offset="40%" stop-color="#691922" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#170305" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Matte Maroon Horizontal Light Strip Gradient -->
+    <linearGradient id="laserHoriz" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#80202A" stop-opacity="0" />
+      <stop offset="20%" stop-color="#80202A" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#d9828c" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#80202A" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#80202A" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Matte Maroon Floor Reflection Gradient -->
+    <linearGradient id="laserFloor" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#d9828c" stop-opacity="0.8" />
+      <stop offset="15%" stop-color="#80202A" stop-opacity="0.7" />
+      <stop offset="60%" stop-color="#59161d" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#80202A" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Metallic Corridor Wall Gradient (Left) -->
+    <linearGradient id="wallLeft" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#040406" />
+      <stop offset="30%" stop-color="#0f0f14" />
+      <stop offset="70%" stop-color="#171720" />
+      <stop offset="100%" stop-color="#09090c" />
+    </linearGradient>
+
+    <!-- Metallic Corridor Wall Gradient (Right) -->
+    <linearGradient id="wallRight" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="#040406" />
+      <stop offset="30%" stop-color="#0f0f14" />
+      <stop offset="70%" stop-color="#171720" />
+      <stop offset="100%" stop-color="#09090c" />
+    </linearGradient>
+
+    <!-- Ceiling Panel Gradient -->
+    <linearGradient id="ceilingGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#030304" />
+      <stop offset="50%" stop-color="#121218" />
+      <stop offset="100%" stop-color="#07070a" />
+    </linearGradient>
+
+    <!-- Floor Panel Gradient -->
+    <linearGradient id="floorGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#020203" />
+      <stop offset="50%" stop-color="#0c0c10" />
+      <stop offset="100%" stop-color="#060608" />
+    </linearGradient>
+
+    <!-- Outer Octagon Frame Gradient -->
+    <radialGradient id="frameMetal" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#191920" />
+      <stop offset="85%" stop-color="#252530" />
+      <stop offset="93%" stop-color="#111116" />
+      <stop offset="100%" stop-color="#07070a" />
+    </radialGradient>
+
+    <!-- Soft Matte Maroon Ambient Blur Filters (Not blinding neon) -->
+    <filter id="glowSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="blur1" />
+      <feGaussianBlur stdDeviation="4" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="portalMatteGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Deep Matte Dark Space Base -->
+  <rect width="2000" height="1000" fill="url(#bgVoid)" />
+
+  <!-- 2. Perspective Corridor Walls: Left and Right Ribbed Metallic Bulkheads -->
+  <!-- Left Wall Outer Polygons -->
+  <polygon points="0,0 720,200 720,800 0,1000" fill="url(#wallLeft)" />
+  <!-- Right Wall Outer Polygons -->
+  <polygon points="2000,0 1280,200 1280,800 2000,1000" fill="url(#wallRight)" />
+
+  <!-- Ceiling Bulkhead -->
+  <polygon points="0,0 2000,0 1280,200 720,200" fill="url(#ceilingGrad)" />
+  <!-- Floor Bulkhead -->
+  <polygon points="0,1000 2000,1000 1280,800 720,800" fill="url(#floorGrad)" />
+
+  <!-- 3. Perspective Architectural Ribs (Left Side) -->
+  <polygon points="120,60 170,85 170,915 120,940" fill="#181822" opacity="0.65" />
+  <polygon points="260,110 320,135 320,865 260,890" fill="#1f1f2a" opacity="0.55" />
+  <polygon points="420,150 470,170 470,830 420,850" fill="#16161f" opacity="0.6" />
+  <polygon points="580,180 620,192 620,808 580,820" fill="#111116" opacity="0.7" />
+
+  <!-- Perspective Architectural Ribs (Right Side) -->
+  <polygon points="1880,60 1830,85 1830,915 1880,940" fill="#181822" opacity="0.65" />
+  <polygon points="1740,110 1680,135 1680,865 1740,890" fill="#1f1f2a" opacity="0.55" />
+  <polygon points="1580,150 1530,170 1530,830 1580,850" fill="#16161f" opacity="0.6" />
+  <polygon points="1420,180 1380,192 1380,808 1420,820" fill="#111116" opacity="0.7" />
+
+  <!-- Subtle Perspective Seam Lines -->
+  <line x1="0" y1="350" x2="720" y2="380" stroke="#252532" stroke-width="2" opacity="0.4" />
+  <line x1="0" y1="650" x2="720" y2="620" stroke="#252532" stroke-width="2" opacity="0.4" />
+  <line x1="2000" y1="350" x2="1280" y2="380" stroke="#252532" stroke-width="2" opacity="0.4" />
+  <line x1="2000" y1="650" x2="1280" y2="620" stroke="#252532" stroke-width="2" opacity="0.4" />
+
+  <!-- Ceiling Tech Grilles and Conduits -->
+  <line x1="300" y1="40" x2="800" y2="200" stroke="#1a1a22" stroke-width="3" opacity="0.5" />
+  <line x1="1700" y1="40" x2="1200" y2="200" stroke="#1a1a22" stroke-width="3" opacity="0.5" />
+  <line x1="600" y1="20" x2="900" y2="200" stroke="#121218" stroke-width="2" opacity="0.4" />
+  <line x1="1400" y1="20" x2="1100" y2="200" stroke="#121218" stroke-width="2" opacity="0.4" />
+
+  <!-- 4. Heavy Octagonal Metal Bulkhead Frame -->
+  <!-- Outer Beveled Octagon Frame (Center at 1000, 500) -->
+  <polygon points="
+    820,160 1180,160
+    1380,320 1380,680
+    1180,840 820,840
+    620,680 620,320
+  " fill="url(#frameMetal)" stroke="#2d2d3a" stroke-width="6" />
+
+  <!-- Intermediate Step Octagon Rim -->
+  <polygon points="
+    845,190 1155,190
+    1340,340 1340,660
+    1155,810 845,810
+    660,660 660,340
+  " fill="#0b0b0e" stroke="#3d3d4e" stroke-width="4" />
+
+  <!-- Inner Octagon Bevel Lip -->
+  <polygon points="
+    865,215 1135,215
+    1310,360 1310,640
+    1135,785 865,785
+    690,640 690,360
+  " fill="#040406" stroke="#14141a" stroke-width="3" />
+
+  <!-- 5. GLOWING MATTE MAROON OCTAGONAL PORTAL CHAMBER -->
+  <!-- Portal Inner Cavity (The Matte Maroon Core) -->
+  <g filter="url(#portalMatteGlow)">
+    <polygon points="
+      875,225 1125,225
+      1295,370 1295,630
+      1125,775 875,775
+      705,630 705,370
+    " fill="url(#portalCore)" />
+  </g>
+
+  <!-- Energy Swirls inside Portal (Matte Maroon & Deep Burgundy) -->
+  <g opacity="0.75" filter="url(#glowSoft)">
+    <!-- Swirl 1 -->
+    <path d="M 730,420 Q 820,260 1000,290 T 1250,380 Q 1280,520 1150,650 T 850,720 Q 730,620 730,420 Z" fill="url(#plasma1)" />
+    <!-- Swirl 2 -->
+    <path d="M 820,340 Q 1050,220 1220,350 T 1260,580 Q 1120,740 920,700 T 750,500 Q 760,380 820,340 Z" fill="url(#plasma2)" />
+    <!-- Center subtle atmospheric depth -->
+    <ellipse cx="1000" cy="500" rx="200" ry="200" fill="#80202A" opacity="0.4" />
+    <ellipse cx="1000" cy="500" rx="120" ry="120" fill="#9e2e3a" opacity="0.35" />
+  </g>
+
+  <!-- Inner Portal Octagon Rim Matte Maroon Edge -->
+  <polygon points="
+    875,225 1125,225
+    1295,370 1295,630
+    1125,775 875,775
+    705,630 705,370
+  " fill="none" stroke="#80202A" stroke-width="3.5" opacity="0.8" />
+
+  <!-- 6. Humanoid Energy Silhouette in Portal Center (Matching Attached Ref) -->
+  <g id="portalFigure" opacity="0.9" transform="translate(1000, 500)">
+    <!-- Head -->
+    <ellipse cx="0" cy="-115" rx="14" ry="18" fill="#040406" />
+    <ellipse cx="0" cy="-115" rx="14" ry="18" stroke="#80202A" stroke-width="1.2" fill="none" opacity="0.6" />
+
+    <!-- Neck and Torso -->
+    <path d="
+      M -6,-96 L 6,-96
+      L 18,-60 L 14, -10 L 16, 20 L 0, 40 L -16, 20 L -14, -10 L -18, -60 Z
+    " fill="#040406" />
+
+    <!-- Torso Subtle Maroon Accent Lines -->
+    <line x1="0" y1="-75" x2="0" y2="15" stroke="#80202A" stroke-width="1.8" opacity="0.75" />
+    <line x1="-8" y1="-40" x2="8" y2="-40" stroke="#80202A" stroke-width="1.2" opacity="0.65" />
+    <line x1="-6" y1="-15" x2="6" y2="-15" stroke="#80202A" stroke-width="1.2" opacity="0.65" />
+
+    <!-- Left Arm Outstretched -->
+    <path d="M -18,-55 Q -60,-20 -95, 2 Q -75, -5 -22, -45 Z" fill="#040406" />
+    <!-- Right Arm Outstretched -->
+    <path d="M 18,-55 Q 60,-20 95, 2 Q 75, -5 22, -45 Z" fill="#040406" />
+
+    <!-- Legs and Lower Body -->
+    <path d="
+      M -14,35 L -10,130 L -14, 185 L -8, 185 L -2, 130 L 0, 50
+      L 2, 130 L 8, 185 L 14, 185 L 10, 130 L 14, 35 Z
+    " fill="#040406" />
+
+    <!-- Subtle Silhouette Rim Lighting in Matte Maroon -->
+    <path d="
+      M -95,2 Q -60,-20 -18,-55 L -6,-96 L 0,-135 L 6,-96 L 18,-55 Q 60,-20 95,2
+    " stroke="#9e2e3a" stroke-width="1.2" fill="none" opacity="0.75" />
+  </g>
+
+  <!-- 7. Lateral Horizontal Matte Maroon Architectural Light Strips -->
+  <!-- Left Wall Horizontal Light Strip -->
+  <g>
+    <!-- Ambient Maroon Bloom -->
+    <rect x="0" y="492" width="620" height="16" fill="url(#laserHoriz)" opacity="0.45" />
+    <!-- Core Strip -->
+    <rect x="0" y="497" width="620" height="5" fill="#80202A" opacity="0.85" />
+    <rect x="0" y="499" width="620" height="1.5" fill="#d9828c" opacity="0.7" />
+  </g>
+
+  <!-- Left Wall Light Emitters -->
+  <circle cx="145" cy="500" r="7" fill="#80202A" />
+  <circle cx="145" cy="500" r="2.5" fill="#d9828c" />
+
+  <circle cx="350" cy="500" r="6" fill="#80202A" />
+  <circle cx="350" cy="500" r="2" fill="#d9828c" />
+
+  <circle cx="520" cy="500" r="5" fill="#80202A" />
+  <circle cx="520" cy="500" r="1.5" fill="#d9828c" />
+
+  <!-- Right Wall Horizontal Light Strip -->
+  <g>
+    <rect x="1380" y="492" width="620" height="16" fill="url(#laserHoriz)" opacity="0.45" />
+    <rect x="1380" y="497" width="620" height="5" fill="#80202A" opacity="0.85" />
+    <rect x="1380" y="499" width="620" height="1.5" fill="#d9828c" opacity="0.7" />
+  </g>
+
+  <!-- Right Wall Light Emitters -->
+  <circle cx="1855" cy="500" r="7" fill="#80202A" />
+  <circle cx="1855" cy="500" r="2.5" fill="#d9828c" />
+
+  <circle cx="1650" cy="500" r="6" fill="#80202A" />
+  <circle cx="1650" cy="500" r="2" fill="#d9828c" />
+
+  <circle cx="1480" cy="500" r="5" fill="#80202A" />
+  <circle cx="1480" cy="500" r="1.5" fill="#d9828c" />
+
+  <!-- 8. Floor Center Matte Maroon Guide Line & Reflection -->
+  <g>
+    <polygon points="996,785 1004,785 1010,1000 990,1000" fill="url(#laserFloor)" />
+    <line x1="1000" y1="785" x2="1000" y2="1000" stroke="#80202A" stroke-width="3" opacity="0.8" />
+    <line x1="1000" y1="785" x2="1000" y2="950" stroke="#d9828c" stroke-width="1.2" opacity="0.65" />
+  </g>
+
+  <!-- Floor Center Portal Threshold Beacon in Matte Maroon -->
+  <circle cx="1000" cy="785" r="10" fill="#80202A" />
+  <circle cx="1000" cy="785" r="3.5" fill="#d9828c" />
+
+  <!-- Floor Perspective Grid Lines -->
+  <line x1="720" y1="800" x2="0" y2="1000" stroke="#22222d" stroke-width="2" opacity="0.35" />
+  <line x1="860" y1="820" x2="450" y2="1000" stroke="#22222d" stroke-width="1.5" opacity="0.3" />
+  <line x1="1140" y1="820" x2="1550" y2="1000" stroke="#22222d" stroke-width="1.5" opacity="0.3" />
+  <line x1="1280" y1="800" x2="2000" y2="1000" stroke="#22222d" stroke-width="2" opacity="0.35" />
+
+  <!-- 9. Atmospheric Dark Matte Vignette (Fades into pure #000000 on all screen edges) -->
+  <rect width="2000" height="1000" fill="url(#bgVoid)" opacity="0.35" />
+  <!-- Top and Bottom Linear Dark Fades -->
+  <rect x="0" y="0" width="2000" height="160" fill="url(#ceilingGrad)" opacity="0.65" />
+  <rect x="0" y="860" width="2000" height="140" fill="url(#floorGrad)" opacity="0.8" />
+</svg>
