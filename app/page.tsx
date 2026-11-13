@@ -7,9 +7,12 @@ import Cylinder3DCarousel from '@/components/Cylinder3DCarousel';
 import PersistentBackground from '@/components/PersistentBackground';
 import DevHubLogo from '@/components/DevHubLogo';
 import { AGENCY_SERVICES_ITEMS } from '@/data/agencyShowcase';
+import { WhatsAppIcon } from '@/components/icons';
 
 export default function HomePage() {
   const [consultationSubmitted, setConsultationSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [whatsappChatUrl, setWhatsappChatUrl] = useState('');
   const [consultationData, setConsultationData] = useState({
     name: '',
     phone: '',
@@ -18,9 +21,36 @@ export default function HomePage() {
     brief: '',
   });
 
-  const handleConsultationSubmit = (e: React.FormEvent) => {
+  const handleConsultationSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setConsultationSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...consultationData,
+          source: 'Home Page Consultation Form',
+        }),
+      });
+
+      const data = await res.json();
+      if (data.whatsappUrl) {
+        setWhatsappChatUrl(data.whatsappUrl);
+        // Automatically open WhatsApp with pre-filled details for instant lead delivery
+        try {
+          window.open(data.whatsappUrl, '_blank', 'noopener,noreferrer');
+        } catch (_) {}
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      const fallbackText = `Hi Dev Hub! My name is ${consultationData.name}. I want to build a ${consultationData.category}. Phone: ${consultationData.phone}, Email: ${consultationData.email || 'N/A'}. Notes: ${consultationData.brief}`;
+      setWhatsappChatUrl(`https://wa.me/916395092413?text=${encodeURIComponent(fallbackText)}`);
+    } finally {
+      setIsSubmitting(false);
+      setConsultationSubmitted(true);
+    }
   };
 
   return (
@@ -123,7 +153,7 @@ export default function HomePage() {
                 Have A Project In Mind?
               </h2>
               <p className="text-zinc-400 text-xs sm:text-sm mt-2 sm:mt-3 font-normal leading-relaxed">
-                Tell us about your brand or business requirements. Our team will review your scope, give you a transparent timeline and quote, and deliver your site in 48 hours.
+                Tell us about your brand or business requirements. Our team will review your scope, deliver an instant quote, and ship your live site in 48 hours.
               </p>
             </div>
 
@@ -132,21 +162,30 @@ export default function HomePage() {
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#80202A]/20 text-[#d47883] flex items-center justify-center mx-auto text-2xl sm:text-3xl font-bold border border-[#80202A]/40">
                   ✓
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Inquiry Received</h3>
-                <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto">
-                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. A developer from Dev Hub will contact you directly via WhatsApp / Phone ({consultationData.phone}) or email (admindevvhubb@gmail.com) within 2 hours.
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Inquiry Dispatched to Admin!</h3>
+                <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. Your inquiry has been sent to our inbox at <span className="text-white font-mono">admindevvhubb@gmail.com</span>.
                 </p>
-                <div className="pt-3 sm:pt-4">
+                <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
-                    href={`https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20just%20submitted%20a%20project%20inquiry%20for%20a%20${encodeURIComponent(
-                      consultationData.category
-                    )}.`}
+                    href={whatsappChatUrl || `https://wa.me/916395092413`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95 shadow-md"
                   >
-                    <span>Instant Chat On WhatsApp (+91 63950 92413) →</span>
+                    <WhatsAppIcon size={16} />
+                    <span>Open WhatsApp Chat (+91 63950 92413) →</span>
                   </a>
+
+                  <button
+                    onClick={() => {
+                      setConsultationSubmitted(false);
+                      setConsultationData({ name: '', phone: '', email: '', category: 'Online Store', brief: '' });
+                    }}
+                    className="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs font-semibold uppercase tracking-wider transition-colors"
+                  >
+                    Submit Another Request
+                  </button>
                 </div>
               </div>
             ) : (
@@ -226,15 +265,23 @@ export default function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 sm:py-4 rounded-xl font-bold uppercase text-xs tracking-wider bg-[#80202A] hover:bg-[#942733] border border-[#80202A]/50 text-white transition-all transform hover:-translate-y-0.5 shadow-md shadow-black/80"
+                  disabled={isSubmitting}
+                  className="w-full py-3.5 sm:py-4 rounded-xl font-bold uppercase text-xs tracking-wider bg-[#80202A] hover:bg-[#942733] disabled:opacity-60 border border-[#80202A]/50 text-white transition-all transform hover:-translate-y-0.5 shadow-md shadow-black/80 flex items-center justify-center gap-2"
                 >
-                  Send Project Inquiry →
+                  {isSubmitting ? (
+                    <>
+                      <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Sending Inquiry to Admin...</span>
+                    </>
+                  ) : (
+                    <span>Send Project Inquiry →</span>
+                  )}
                 </button>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 pt-2 text-[11px] sm:text-xs text-zinc-500 font-medium text-center sm:text-left">
                   <span>✓ 48-Hour Rapid Delivery</span>
                   <span>✓ 100% Code &amp; Domain Ownership</span>
-                  <span>✓ Dedicated Dev Hub Engineering Desk</span>
+                  <span>✓ Direct WhatsApp Desk: +91 63950 92413</span>
                 </div>
               </form>
             )}
