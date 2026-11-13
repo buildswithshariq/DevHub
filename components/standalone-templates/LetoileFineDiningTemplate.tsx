@@ -562,7 +562,7 @@ export function LetoileFineDiningTemplate() {
               <div className="text-[#c9a96e] uppercase tracking-[0.2em] text-[11px]">Direct Concierge</div>
               <p className="text-xs text-[#a39e93]">Need VIP table booking assistance?</p>
               <a
-                href="https://wa.me/919999999999?text=Hi%20L%27Etoile%20Concierge%2C%20I%20wish%20to%20inquire%20about%20a%20table%20reservation"
+                href="https://wa.me/916395092413?text=Hi%20L%27Etoile%20Concierge%2C%20I%20wish%20to%20inquire%20about%20a%20table%20reservation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 border border-[#c9a96e]/40 text-[#c9a96e] hover:border-[#c9a96e] text-xs uppercase tracking-wider transition-colors"

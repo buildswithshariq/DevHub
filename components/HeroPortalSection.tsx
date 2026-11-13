@@ -62,7 +62,7 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
               viewBox="0 0 24 24"
             >
               <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
-              <path strokeWidth="1.5" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              <path strokeWidth="1.5" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
             </svg>
           </button>
 
@@ -82,7 +82,7 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
       </header>
 
       {/* ------------------------------------------------------------- */}
-      {/* 3. CENTER HERO HEADLINE & ACTIONS (Brought back & balanced)   */}
+      {/* 3. CENTER HERO HEADLINE & ACTIONS                             */}
       {/* ------------------------------------------------------------- */}
       <div className="relative z-20 text-center px-4 max-w-2xl mx-auto my-auto pointer-events-none">
         <div className="pointer-events-auto inline-flex flex-col items-center">
@@ -101,7 +101,7 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
             Websites and digital platforms built to launch and grow your business in 48 hours.
           </p>
 
-          {/* Quick Jump & Direct Action Buttons in Matte Maroon & Charcoal */}
+          {/* Quick Jump & Direct Action Buttons */}
           <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             <button
               onClick={() => scrollToSection('home-actions')}
@@ -134,8 +134,16 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
       {/* 4. BOTTOM BAR                                                 */}
       {/* ------------------------------------------------------------- */}
       <footer className="relative z-30 w-full px-6 sm:px-12 pb-6 sm:pb-8 flex items-end justify-between">
-        <div className="text-[11px] sm:text-xs tracking-wider text-zinc-400 uppercase font-medium">
-          <span>2026 / DEV HUB © ENGINEERING THE FUTURE</span>
+        <div className="text-[11px] sm:text-xs tracking-wider text-zinc-400 uppercase font-medium flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+          <span>2026 / DEV HUB</span>
+          <span className="hidden sm:inline opacity-40">•</span>
+          <a href="tel:+916395092413" className="hover:text-white transition-colors">
+            +91 63950 92413
+          </a>
+          <span className="hidden sm:inline opacity-40">•</span>
+          <a href="mailto:admindevvhubb@gmail.com" className="hover:text-white transition-colors">
+            admindevvhubb@gmail.com
+          </a>
         </div>
 
         {/* Bottom Center Scroll Down Indicator */}
@@ -149,10 +157,10 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
           <span className="w-1.5 h-1.5 rounded-full bg-[#80202A] shadow-[0_0_8px_#80202A]" />
         </button>
 
-        {/* Bottom Right Floating Chat Widget in Matte Maroon */}
+        {/* Bottom Right Floating Chat Widget connected to +91 63950 92413 */}
         <div className="relative">
           <a
-            href="https://wa.me/?text=Hi%20Dev%20Hub!%20I%20am%20interested%20in%20building%20a%20website%20or%20software%20platform."
+            href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20am%20interested%20in%20building%20a%20website%20or%20software%20platform."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Direct Consultation Chat"
@@ -250,9 +258,38 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
 
             <div className="space-y-4 sm:space-y-6 md:border-l md:border-zinc-900 md:pl-10">
               <p className="text-xs uppercase tracking-widest text-[#9e2e3a] font-semibold">
-                Quick Actions
+                Contact &amp; Actions
               </p>
               <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300 font-medium">
+                <li>
+                  <a
+                    href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20would%20like%20to%20discuss%20a%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors flex items-center justify-between text-emerald-400 group"
+                  >
+                    <span>WhatsApp (+91 63950 92413)</span>
+                    <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+916395092413"
+                    className="hover:text-white transition-colors flex items-center justify-between text-zinc-300 group"
+                  >
+                    <span>Direct Call (+91 63950 92413)</span>
+                    <span className="text-zinc-500 font-mono text-xs">Call</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:admindevvhubb@gmail.com"
+                    className="hover:text-white transition-colors flex items-center justify-between text-zinc-300 group"
+                  >
+                    <span>admindevvhubb@gmail.com</span>
+                    <span className="text-zinc-500 font-mono text-xs">Email</span>
+                  </a>
+                </li>
                 <li>
                   <Link
                     href="/templates"
@@ -262,27 +299,6 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
                     <span>Browse All 56+ Templates</span>
                     <span className="text-[#c25360] group-hover:translate-x-1 transition-transform">↗</span>
                   </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/projects"
-                    onClick={() => setMenuOpen(false)}
-                    className="hover:text-white transition-colors flex items-center justify-between group"
-                  >
-                    <span>View Client Case Studies</span>
-                    <span className="text-[#c25360] group-hover:translate-x-1 transition-transform">↗</span>
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/?text=Hi%20Dev%20Hub!%20I%20would%20like%20to%20discuss%20a%20project."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors flex items-center justify-between text-emerald-400 group"
-                  >
-                    <span>Chat on WhatsApp</span>
-                    <span className="group-hover:translate-x-1 transition-transform">↗</span>
-                  </a>
                 </li>
                 <li>
                   <button
@@ -302,7 +318,7 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
           </div>
 
           <div className="pt-5 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-medium">
-            <span>DEV HUB DIGITAL SYSTEMS • ENGINEERING THE FUTURE</span>
+            <span>DEV HUB DIGITAL SYSTEMS • admindevvhubb@gmail.com</span>
             <div className="flex gap-4">
               <span>TURNKEY 48-HOUR LAUNCH</span>
             </div>

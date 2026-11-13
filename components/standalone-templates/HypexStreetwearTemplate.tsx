@@ -639,7 +639,7 @@ export function HypexStreetwearTemplate() {
               <div className="text-white font-bold uppercase text-[11px] tracking-wider">Direct Order Desk</div>
               <p className="text-zinc-400 text-xs">Need custom batch orders or styling advice?</p>
               <a
-                href="https://wa.me/919999999999?text=Hi%20HYPEX%20Streetwear%20Team%2C%20I%20have%20an%20order%20inquiry"
+                href="https://wa.me/916395092413?text=Hi%20HYPEX%20Streetwear%20Team%2C%20I%20have%20an%20order%20inquiry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded bg-zinc-900 border border-zinc-700 text-[#39ff14] hover:border-[#39ff14] text-xs font-bold"

@@ -32,7 +32,6 @@ export default function HomePage() {
 
       {/* ------------------------------------------------------------- */}
       {/* 2. CINEMATIC HERO PORTAL SECTION                              */}
-      {/* 100% clean and unobstructed matching reference image           */}
       {/* ------------------------------------------------------------- */}
       <HeroPortalSection />
 
@@ -50,7 +49,7 @@ export default function HomePage() {
             <span>Web Development &amp; Software Studio</span>
           </div>
 
-          {/* Clean Human Heading - Solid White */}
+          {/* Clean Human Heading */}
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase leading-tight">
             Websites and digital tools built to help your business grow.
           </h2>
@@ -59,7 +58,7 @@ export default function HomePage() {
             We build and launch high-converting e-commerce stores, local business platforms, restaurant QR software, and custom AI tools. Clean design, fast page speed, and delivered ready to sell in 48 hours.
           </p>
 
-          {/* The 3 Action Buttons in Matte Maroon & Charcoal */}
+          {/* Action Buttons */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/templates"
@@ -114,7 +113,6 @@ export default function HomePage() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="p-6 sm:p-14 rounded-3xl bg-[#0a0a0f]/95 border border-zinc-800/90 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-            {/* Subtle Matte Maroon Ambient Aura */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#80202A]/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
@@ -136,18 +134,18 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white">Inquiry Received</h3>
                 <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto">
-                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. An engineer from Dev Hub will contact you via WhatsApp / Phone ({consultationData.phone}) within 2 hours.
+                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. A developer from Dev Hub will contact you directly via WhatsApp / Phone ({consultationData.phone}) or email (admindevvhubb@gmail.com) within 2 hours.
                 </p>
                 <div className="pt-3 sm:pt-4">
                   <a
-                    href={`https://wa.me/?text=Hi%20Dev%20Hub!%20I%20just%20submitted%20a%20project%20inquiry%20for%20a%20${encodeURIComponent(
+                    href={`https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20just%20submitted%20a%20project%20inquiry%20for%20a%20${encodeURIComponent(
                       consultationData.category
                     )}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95"
                   >
-                    <span>Instant Chat On WhatsApp →</span>
+                    <span>Instant Chat On WhatsApp (+91 63950 92413) →</span>
                   </a>
                 </div>
               </div>
@@ -176,7 +174,7 @@ export default function HomePage() {
                       required
                       value={consultationData.phone}
                       onChange={(e) => setConsultationData({ ...consultationData, phone: e.target.value })}
-                      placeholder="+1 (555) 019-2834"
+                      placeholder="+91 63950 92413"
                       className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black border border-zinc-800 text-white text-xs sm:text-sm focus:outline-none focus:border-[#80202A]"
                     />
                   </div>
@@ -207,7 +205,7 @@ export default function HomePage() {
                       type="email"
                       value={consultationData.email}
                       onChange={(e) => setConsultationData({ ...consultationData, email: e.target.value })}
-                      placeholder="liam@brand.com"
+                      placeholder="admindevvhubb@gmail.com"
                       className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black border border-zinc-800 text-white text-xs sm:text-sm focus:outline-none focus:border-[#80202A]"
                     />
                   </div>
@@ -245,7 +243,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------------------------------------------- */}
-      {/* 6. MATTE BLACK FOOTER WITH DEV HUB LOGO                       */}
+      {/* 6. MATTE BLACK FOOTER WITH DEV HUB LOGO & CONTACT INFO        */}
       {/* ------------------------------------------------------------- */}
       <footer className="relative z-10 py-12 sm:py-16 bg-[#060608]/98 border-t border-zinc-900 text-zinc-500 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -266,7 +264,7 @@ export default function HomePage() {
                 Consultation
               </a>
               <a
-                href="https://wa.me/?text=Hi%20Dev%20Hub!%20I%20want%20to%20build%20a%20project."
+                href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20want%20to%20build%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-emerald-400 transition-colors text-emerald-500"
@@ -277,7 +275,18 @@ export default function HomePage() {
           </div>
 
           <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-normal text-center sm:text-left">
-            <p>© 2026 Dev Hub. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-zinc-400">
+              <p>© 2026 Dev Hub. All rights reserved.</p>
+              <span className="hidden sm:inline opacity-30">•</span>
+              <a href="tel:+916395092413" className="hover:text-white transition-colors">
+                +91 63950 92413
+              </a>
+              <span className="hidden sm:inline opacity-30">•</span>
+              <a href="mailto:admindevvhubb@gmail.com" className="hover:text-white transition-colors">
+                admindevvhubb@gmail.com
+              </a>
+            </div>
+
             <div className="flex items-center justify-center gap-4">
               <span>Pure Matte Black Edition</span>
               <span>•</span>

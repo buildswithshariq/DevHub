@@ -107,7 +107,7 @@ export default function ProjectsPage() {
       {/* 3. HERO INTRO HEADER (Clean Human Studio Design)              */}
       {/* ------------------------------------------------------------- */}
       <div className="relative z-10 pt-12 pb-8 sm:pt-16 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        {/* Clean, Non-AI Badge */}
+        {/* Clean Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-medium text-zinc-300 mb-5 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-[#80202A]" />
           <span>Client Work &amp; Case Studies</span>
@@ -152,13 +152,13 @@ export default function ProjectsPage() {
             <span>↓</span>
           </a>
           <a
-            href="https://wa.me/?text=Hi%20Dev%20Hub!%20I%20saw%20your%20client%20projects%20and%20want%20to%20build%20something%20similar%20for%20my%20business."
+            href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20saw%20your%20client%20projects%20and%20want%20to%20build%20something%20similar%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-full border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 text-xs font-semibold tracking-wider uppercase transition-all flex items-center gap-2 active:scale-95 shadow-md"
           >
             <WhatsAppIcon size={14} className="text-emerald-400" />
-            <span>Chat on WhatsApp</span>
+            <span>Chat on WhatsApp (+91 63950 92413)</span>
           </a>
         </div>
       </div>
@@ -326,7 +326,7 @@ export default function ProjectsPage() {
                   </a>
 
                   <a
-                    href={`https://wa.me/?text=Hi%20Dev%20Hub!%20I%20am%20interested%20in%20a%20platform%20similar%20to%20${encodeURIComponent(
+                    href={`https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20am%20interested%20in%20a%20platform%20similar%20to%20${encodeURIComponent(
                       project.name
                     )}.`}
                     target="_blank"
@@ -373,18 +373,18 @@ export default function ProjectsPage() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white">Project Inquiry Received</h3>
                 <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto">
-                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. A developer from Dev Hub will contact you via WhatsApp / Phone ({consultationData.phone}) within 2 hours.
+                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. A developer from Dev Hub will contact you via WhatsApp / Phone ({consultationData.phone}) or email (admindevvhubb@gmail.com) within 2 hours.
                 </p>
                 <div className="pt-3 sm:pt-4">
                   <a
-                    href={`https://wa.me/?text=Hi%20Dev%20Hub!%20I%20just%20submitted%20a%20project%20inquiry%20for%20a%20${encodeURIComponent(
+                    href={`https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20just%20submitted%20a%20project%20inquiry%20for%20a%20${encodeURIComponent(
                       consultationData.category
                     )}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95"
                   >
-                    <span>Instant Chat On WhatsApp →</span>
+                    <span>Instant Chat On WhatsApp (+91 63950 92413) →</span>
                   </a>
                 </div>
               </div>
@@ -413,7 +413,7 @@ export default function ProjectsPage() {
                       required
                       value={consultationData.phone}
                       onChange={(e) => setConsultationData({ ...consultationData, phone: e.target.value })}
-                      placeholder="+1 (555) 019-2834"
+                      placeholder="+91 63950 92413"
                       className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black border border-zinc-800 text-white text-xs sm:text-sm focus:outline-none focus:border-[#80202A]"
                     />
                   </div>
@@ -444,7 +444,7 @@ export default function ProjectsPage() {
                       type="email"
                       value={consultationData.email}
                       onChange={(e) => setConsultationData({ ...consultationData, email: e.target.value })}
-                      placeholder="liam@brand.com"
+                      placeholder="admindevvhubb@gmail.com"
                       className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black border border-zinc-800 text-white text-xs sm:text-sm focus:outline-none focus:border-[#80202A]"
                     />
                   </div>
@@ -482,7 +482,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ------------------------------------------------------------- */}
-      {/* 7. MATTE BLACK FOOTER WITH DEV HUB LOGO                       */}
+      {/* 7. MATTE BLACK FOOTER WITH DEV HUB LOGO & CONTACT INFO        */}
       {/* ------------------------------------------------------------- */}
       <footer className="relative z-10 py-12 sm:py-16 bg-[#060608]/98 border-t border-zinc-900 text-zinc-500 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -503,7 +503,7 @@ export default function ProjectsPage() {
                 Consultation
               </a>
               <a
-                href="https://wa.me/?text=Hi%20Dev%20Hub!%20I%20want%20to%20build%20a%20project."
+                href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20want%20to%20build%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-emerald-400 transition-colors text-emerald-500"
@@ -514,7 +514,18 @@ export default function ProjectsPage() {
           </div>
 
           <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-normal text-center sm:text-left">
-            <p>© 2026 Dev Hub. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-zinc-400">
+              <p>© 2026 Dev Hub. All rights reserved.</p>
+              <span className="hidden sm:inline opacity-30">•</span>
+              <a href="tel:+916395092413" className="hover:text-white transition-colors">
+                +91 63950 92413
+              </a>
+              <span className="hidden sm:inline opacity-30">•</span>
+              <a href="mailto:admindevvhubb@gmail.com" className="hover:text-white transition-colors">
+                admindevvhubb@gmail.com
+              </a>
+            </div>
+
             <div className="flex items-center justify-center gap-4">
               <span>Pure Matte Black Edition</span>
               <span>•</span>

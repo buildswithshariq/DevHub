@@ -533,7 +533,7 @@ export function TablePulseQrTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20inquire%20about%20TablePulse%20QR%20for%20my%20Cafe"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20want%20to%20inquire%20about%20TablePulse%20QR%20for%20my%20Cafe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-50 text-center font-bold text-xs transition-colors"
@@ -562,7 +562,7 @@ export function TablePulseQrTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20inquire%20about%20TablePulse%20for%20my%20Full-Service%20Restaurant"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20want%20to%20inquire%20about%20TablePulse%20for%20my%20Full-Service%20Restaurant"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700 text-center font-bold text-xs transition-colors shadow-md"
@@ -588,7 +588,7 @@ export function TablePulseQrTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20an%20Enterprise%20Multi-Outlet%20inquiry%20for%20TablePulse"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20have%20an%20Enterprise%20Multi-Outlet%20inquiry%20for%20TablePulse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl border border-slate-300 text-slate-700 hover:border-slate-400 text-center font-bold text-xs transition-colors"
@@ -615,7 +615,7 @@ export function TablePulseQrTemplate() {
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/919999999999?text=Hi%20TablePulse%20Team%2C%20I%20want%20to%20get%20QR%20menus%20for%20my%20restaurant"
+              href="https://wa.me/916395092413?text=Hi%20TablePulse%20Team%2C%20I%20want%20to%20get%20QR%20menus%20for%20my%20restaurant"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-xl"
@@ -623,7 +623,7 @@ export function TablePulseQrTemplate() {
               Get Your QR Menu via WhatsApp →
             </a>
             <a
-              href="mailto:support@devhub.agency?subject=TablePulse%20Demo%20Request"
+              href="mailto:admindevvhubb@gmail.com?subject=TablePulse%20Demo%20Request"
               className="px-6 py-4 rounded-xl border border-slate-300 hover:border-slate-400 text-slate-700 font-bold text-sm transition-colors"
             >
               Request Custom Demo
@@ -667,7 +667,7 @@ export function TablePulseQrTemplate() {
               <div className="font-bold uppercase tracking-wider text-slate-800">Support Desk</div>
               <p className="text-xs text-slate-600">Need help setting up your restaurant floorplan?</p>
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20need%20support%20with%20TablePulse%20QR"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20need%20support%20with%20TablePulse%20QR"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded-lg bg-white border border-slate-300 text-blue-600 font-bold hover:border-blue-600 transition-colors"

@@ -550,7 +550,7 @@ export function OriginCoffeeTemplate() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-[#5c3d2e]">WhatsApp Roastery:</span>
-                  <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#5c3d2e]">
+                  <a href="https://wa.me/916395092413" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#5c3d2e]">
                     +1 (415) 890-BEAN (Direct Concierge)
                   </a>
                 </div>

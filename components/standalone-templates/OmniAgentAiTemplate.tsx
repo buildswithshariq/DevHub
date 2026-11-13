@@ -566,7 +566,7 @@ export function OmniAgentAiTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20inquire%20about%20an%20E-Com%20Support%20AI%20Agent"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20want%20to%20inquire%20about%20an%20E-Com%20Support%20AI%20Agent"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl border border-[#06b6d4] text-[#06b6d4] hover:bg-[#06b6d4]/10 text-center font-bold text-xs uppercase tracking-wider transition-colors"
@@ -595,7 +595,7 @@ export function OmniAgentAiTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20inquire%20about%20a%20WhatsApp%20and%20Voice%20AI%20Agent"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20want%20to%20inquire%20about%20a%20WhatsApp%20and%20Voice%20AI%20Agent"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl bg-[#06b6d4] hover:bg-[#0891b2] text-slate-950 text-center font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#06b6d4]/20"
@@ -621,7 +621,7 @@ export function OmniAgentAiTemplate() {
               </div>
 
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20an%20Enterprise%20Private%20RAG%20AI%20Agent%20inquiry"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20have%20an%20Enterprise%20Private%20RAG%20AI%20Agent%20inquiry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 rounded-xl border border-zinc-700 text-zinc-300 hover:border-zinc-500 text-center font-bold text-xs uppercase tracking-wider transition-colors"
@@ -648,7 +648,7 @@ export function OmniAgentAiTemplate() {
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/919999999999?text=Hi%20OmniAgent%20Team%2C%20I%20want%20to%20deploy%20an%20AI%20agent%20for%20my%20business"
+              href="https://wa.me/916395092413?text=Hi%20OmniAgent%20Team%2C%20I%20want%20to%20deploy%20an%20AI%20agent%20for%20my%20business"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl bg-[#06b6d4] hover:bg-[#0891b2] text-slate-950 font-bold text-sm uppercase tracking-wider transition-all shadow-xl shadow-[#06b6d4]/25"
@@ -656,7 +656,7 @@ export function OmniAgentAiTemplate() {
               Order Deployment via WhatsApp →
             </a>
             <a
-              href="mailto:support@devhub.agency?subject=OmniAgent%20Custom%20Deployment"
+              href="mailto:admindevvhubb@gmail.com?subject=OmniAgent%20Custom%20Deployment"
               className="px-6 py-4 rounded-xl border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-medium text-sm transition-colors"
             >
               Book Discovery Call
@@ -700,7 +700,7 @@ export function OmniAgentAiTemplate() {
               <div className="font-bold uppercase tracking-wider text-zinc-300">AI Concierge Desk</div>
               <p className="text-xs text-zinc-400">Have a custom enterprise database or CRM?</p>
               <a
-                href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20an%20enterprise%20inquiry%20for%20OmniAgent"
+                href="https://wa.me/916395092413?text=Hi%2C%20I%20have%20an%20enterprise%20inquiry%20for%20OmniAgent"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded-lg bg-[#14142e] border border-zinc-700 text-[#06b6d4] font-bold hover:border-[#06b6d4] transition-colors"
