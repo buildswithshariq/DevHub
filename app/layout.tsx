@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import IntroLoader from "@/components/IntroLoader";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://devhub.agency'),
   title: "Dev Hub | Engineering The Future • 56+ Production Architectures",
   description: "Dev Hub — Production-ready digital architectures across E-Commerce, Local Businesses, Small Business Software, and Autonomous AI Engines. Turnkey launch in 48 hours.",
   icons: {
