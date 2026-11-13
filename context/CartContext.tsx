@@ -24,7 +24,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-const OWNER_WHATSAPP_NUMBER = '919568240334'; // Client / store owner WhatsApp phone number
+const OWNER_WHATSAPP_NUMBER = '916395092413'; // Dev Hub official WhatsApp number: +91 63950 92413
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);

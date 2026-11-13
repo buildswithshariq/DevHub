@@ -77,7 +77,7 @@ export default function PricingSection() {
     const encodedMsg = encodeURIComponent(
       `Hello WeBuild.YouSell Team,\n\nName: ${clientName}\nContact: ${clientContact}\nService Needed: ${selectedService}\nProject Details: ${projectNotes}`
     );
-    window.open(`https://wa.me/919999999999?text=${encodedMsg}`, '_blank');
+    window.open(`https://wa.me/916395092413?text=${encodedMsg}`, '_blank');
     setSubmitted(true);
   };
 
@@ -140,7 +140,7 @@ export default function PricingSection() {
 
               <div className="mt-6 pt-5 border-t border-white/[0.08]">
                 <a
-                  href={`https://wa.me/919999999999?text=${encodeURIComponent(track.whatsappText)}`}
+                  href={`https://wa.me/916395092413?text=${encodeURIComponent(track.whatsappText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-xl font-semibold text-xs text-white rose-glow-button flex items-center justify-center gap-2"

@@ -2,53 +2,53 @@
 
 import React from 'react';
 import Link from 'next/link';
+import DevHubLogo from '@/components/DevHubLogo';
 import {
-  WhatsAppIcon,
-  MailIcon,
-  MapPinIcon,
-  ArrowRightIcon,
   ShieldCheckIcon,
-  ClockIcon
+  ClockIcon,
+  WhatsAppIcon,
+  ArrowRightIcon,
+  GlobeIcon
 } from '@/components/icons';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-900 bg-black text-zinc-400 text-sm">
-      {/* Top Value Banner */}
-      <div className="border-b border-zinc-900 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
-            <div className="p-3 rounded-xl bg-red-600/10 text-red-500 border border-red-600/30 shrink-0">
+    <footer className="bg-[#060608]/98 border-t border-zinc-900 text-zinc-400 text-xs">
+      {/* Trust & Guarantee Banner */}
+      <div className="border-b border-zinc-900/80">
+        <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950/80 border border-zinc-900">
+            <div className="p-3 rounded-xl bg-[#80202A]/20 text-[#d47883] border border-[#80202A]/40 shrink-0">
               <ClockIcon size={22} />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">48-Hour Rapid Launch</h3>
+              <h3 className="font-bold text-white text-base">48-Hour Rapid Delivery</h3>
               <p className="text-zinc-400 text-xs mt-1 leading-relaxed font-light">
-                Select any of our 56 turnkey showcases. We customize branding, setup DNS, connect payment gateways, and launch your business in 48 hours.
+                From architecture selection to live custom domain launch in 48 hours. Zero drawn-out agency timelines.
               </p>
             </div>
           </div>
 
-          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
-            <div className="p-3 rounded-xl bg-red-600/10 text-red-500 border border-red-600/30 shrink-0">
+          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950/80 border border-zinc-900">
+            <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shrink-0">
               <ShieldCheckIcon size={22} />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">100% Direct Ownership</h3>
+              <h3 className="font-bold text-white text-base">100% Code &amp; Domain Ownership</h3>
               <p className="text-zinc-400 text-xs mt-1 leading-relaxed font-light">
-                Zero revenue splits, zero vendor lock-in. You receive the complete source code, custom domain, and clean documentation.
+                Full IP transfer upon delivery. You own the complete repository, DNS records, and payment processor credentials.
               </p>
             </div>
           </div>
 
-          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
+          <div className="h-full flex items-start gap-4 p-6 rounded-2xl bg-zinc-950/80 border border-zinc-900">
             <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shrink-0">
               <WhatsAppIcon size={22} />
             </div>
             <div>
               <h3 className="font-bold text-white text-base">Dedicated WhatsApp Desk</h3>
               <p className="text-zinc-400 text-xs mt-1 leading-relaxed font-light">
-                Direct WhatsApp engineering support from initial consultation through post-launch updates. Real humans, instant responses.
+                Direct WhatsApp engineering support on <strong className="text-white">+91 63950 92413</strong> from initial consultation through post-launch updates.
               </p>
             </div>
           </div>
@@ -60,26 +60,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <span className="font-extrabold text-2xl tracking-tight text-[#ff1a2b] uppercase drop-shadow-[0_0_12px_rgba(255,26,43,0.7)] group-hover:scale-105 transition-transform">
-                CLICKABLE
-              </span>
-              <span className="text-xs uppercase tracking-widest text-zinc-400 pl-1 font-medium opacity-80">
-                • WEBUILD.YOUSELL
-              </span>
-            </Link>
+            <DevHubLogo size="md" withTagline={true} />
             <p className="text-zinc-400 text-xs leading-relaxed max-w-sm font-light">
               High-velocity digital engineering studio. We build production-grade e-commerce storefronts, local geo-dominant sites, QR dining platforms, and autonomous AI agents for growing brands worldwide.
             </p>
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <a
-                href="https://wa.me/?text=Hi%2C%20I%20want%20to%20inquire%20about%20a%20project%20with%20WeBuild.YouSell."
+                href="https://wa.me/916395092413?text=Hi%20Dev%20Hub!%20I%20want%20to%20inquire%20about%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs font-semibold hover:bg-emerald-500/20 transition-colors"
               >
                 <WhatsAppIcon size={14} />
-                <span>Instant WhatsApp Desk</span>
+                <span>Chat on WhatsApp (+91 63950 92413)</span>
               </a>
             </div>
           </div>
@@ -89,100 +82,88 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Showcases</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/#ecom-carousel" className="hover:text-white transition-colors">
-                  E-Commerce Stores (22)
+                <Link href="/templates?cat=ecom" className="hover:text-white transition-colors">
+                  E-Commerce Storefronts
                 </Link>
               </li>
               <li>
-                <Link href="/#local-carousel" className="hover:text-white transition-colors">
-                  Local Businesses (15)
+                <Link href="/templates?cat=local" className="hover:text-white transition-colors">
+                  Local Businesses &amp; Salons
                 </Link>
               </li>
               <li>
-                <Link href="/#software-carousel" className="hover:text-white transition-colors">
-                  Software &amp; QR (8)
+                <Link href="/templates?cat=software" className="hover:text-white transition-colors">
+                  Software &amp; QR Ordering
                 </Link>
               </li>
               <li>
-                <Link href="/#ai-carousel" className="hover:text-white transition-colors">
-                  AI Solutions (10)
-                </Link>
-              </li>
-              <li>
-                <Link href="/#ecom-carousel" className="text-red-400 hover:text-red-300 font-semibold transition-colors">
-                  Explore 56+ Showcases →
+                <Link href="/templates?cat=ai" className="hover:text-white transition-colors">
+                  Autonomous AI Solutions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Solutions */}
+          {/* Column 2: Quick Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Engineering</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Platform</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/#software-carousel" className="hover:text-white transition-colors">
-                  QR Menu &amp; Ordering
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/#software-carousel" className="hover:text-white transition-colors">
-                  Table &amp; Salon Booking
+                <Link href="/templates" className="hover:text-white transition-colors text-[#d47883]">
+                  All 56+ Templates
                 </Link>
               </li>
               <li>
-                <Link href="/#ai-carousel" className="hover:text-white transition-colors">
-                  Autonomous AI Agents
+                <Link href="/projects" className="hover:text-white transition-colors">
+                  Client Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/#ai-carousel" className="hover:text-white transition-colors">
-                  AI Voice Phone Assistants
-                </Link>
-              </li>
-              <li>
-                <Link href="/#ai-carousel" className="hover:text-white transition-colors">
-                  Vector RAG Knowledge Base
+                <Link href="/#agency-consultation" className="hover:text-white transition-colors">
+                  Project Consultation
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* Column 3: Contact Directly */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Contact &amp; Studio</h4>
-            <ul className="space-y-2.5 text-xs">
-              <li className="flex items-center gap-2">
-                <MailIcon size={14} className="text-zinc-500" />
-                <a href="mailto:hello@webuildyousell.com" className="hover:text-white transition-colors">
-                  hello@webuildyousell.com
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Direct Contact</h4>
+            <ul className="space-y-2 text-xs text-zinc-400">
+              <li>
+                <a href="tel:+916395092413" className="hover:text-white transition-colors font-mono">
+                  +91 63950 92413
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPinIcon size={14} className="text-zinc-500" />
-                <span>Global Remote Engineering Desk</span>
+              <li>
+                <a href="mailto:admindevvhubb@gmail.com" className="hover:text-white transition-colors font-mono">
+                  admindevvhubb@gmail.com
+                </a>
               </li>
-              <li className="pt-2">
-                <Link
-                  href="/#agency-consultation"
-                  className="inline-flex items-center gap-1.5 text-red-400 hover:text-white text-xs font-bold transition-colors"
-                >
-                  <span>Request Turnkey Quote</span>
-                  <ArrowRightIcon size={12} />
-                </Link>
+              <li>
+                <span className="text-zinc-500">Operating: Mon – Sun (24/7)</span>
+              </li>
+              <li>
+                <span className="text-zinc-500">Turnaround: 48-Hour Launch</span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-10 mt-10 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-medium">
-          <p>© 2026 WeBuild.YouSell Digital Platforms. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/" className="hover:text-zinc-300 transition-colors">Home</Link>
-            <Link href="/#ecom-carousel" className="hover:text-zinc-300 transition-colors">Templates</Link>
+      {/* Bottom Bar */}
+      <div className="border-t border-zinc-900 bg-black py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>© 2026 Dev Hub. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-zinc-500">
+            <span>Pure Matte Black Edition</span>
             <span>•</span>
-            <span className="text-zinc-400">Built by WeBuild.YouSell →</span>
+            <span className="text-zinc-400">ENGINEERING THE FUTURE →</span>
           </div>
         </div>
       </div>

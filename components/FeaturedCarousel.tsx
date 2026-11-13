@@ -417,7 +417,7 @@ export default function FeaturedCarousel() {
                     </button>
 
                     <a
-                      href={`https://wa.me/919999999999?text=Hi%2C%20I%20am%20interested%20in%20a%20project%20like%20${encodeURIComponent(
+                      href={`https://wa.me/916395092413?text=Hi%2C%20I%20am%20interested%20in%20a%20project%20like%20${encodeURIComponent(
                         template.name
                       )}`}
                       target="_blank"
@@ -506,7 +506,7 @@ export default function FeaturedCarousel() {
                     <ExternalLinkIcon size={13} />
                   </a>
                   <a
-                    href={`https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20build%20with%20template%20${encodeURIComponent(
+                    href={`https://wa.me/916395092413?text=Hi%2C%20I%20want%20to%20build%20with%20template%20${encodeURIComponent(
                       previewTemplate.name
                     )}`}
                     target="_blank"

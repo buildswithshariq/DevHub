@@ -159,7 +159,7 @@ export default function ServicesSection() {
               {/* Bottom Action Area */}
               <div className="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
                 <a
-                  href={`https://wa.me/919999999999?text=Hi%2C%20I%20am%20interested%20in%20your%20service%3A%20${encodeURIComponent(
+                  href={`https://wa.me/916395092413?text=Hi%2C%20I%20am%20interested%20in%20your%20service%3A%20${encodeURIComponent(
                     service.title
                   )}`}
                   target="_blank"
@@ -194,7 +194,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <a
-            href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20a%20custom%20enterprise%20inquiry"
+            href="https://wa.me/916395092413?text=Hi%2C%20I%20have%20a%20custom%20enterprise%20inquiry"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm text-white rose-glow-button flex-shrink-0 flex items-center justify-center gap-2 relative z-10"
