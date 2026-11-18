@@ -1,21 +1,13 @@
 <svg width="1050" height="600" viewBox="0 0 1050 600" xmlns="http://www.w3.org/2000/svg">
   <title>Dev Hub Business Card - Front (100% Curves)</title>
-  <rect width="1050" height="600" fill="#141416" />
+  <rect width="100%" height="100%" fill="#0C0C0D" />
   <radialGradient id="cardShade" cx="85%" cy="15%" r="75%">
-    <stop offset="0%" stop-color="#1d1d22" stop-opacity="0.4" />
-    <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0.8" />
+    <stop offset="0%" stop-color="#0C0C0D" stop-opacity="0.4" />
+    <stop offset="100%" stop-color="#0C0C0D" stop-opacity="0.8" />
   </radialGradient>
   <rect width="1050" height="600" fill="url(#cardShade)" />
 
-  
-  <g transform="translate(80, 270) scale(1.15)">
-    <!-- Left Bracket (Matte Maroon #80202A) -->
-    <path d="M 45 15 L 7 56 L 45 97" fill="none" stroke="#80202A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
-    <!-- Center Slash (Dark Charcoal #383838) -->
-    <path d="M 75 7 L 45 105" fill="none" stroke="#383838" stroke-width="14" stroke-linecap="round" />
-    <!-- Right Bracket (Matte Maroon #80202A) -->
-    <path d="M 75 15 L 113 56 L 75 97" fill="none" stroke="#80202A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
+
 
   <path d="M86.46875 465.0V414.5859375H99.08984375Q111.640625 414.5859375 118.1796875 420.84375Q124.71875 427.1015625 124.71875 439.08984375Q124.71875 450.62109375 117.705078125 457.810546875Q110.69140625 465.0 98.3515625 465.0ZM89.94921875 417.78515625V461.8359375H97.859375Q109.07421875 461.8359375 115.0859375 456.017578125Q121.09765625 450.19921875 121.09765625 439.23046875Q121.09765625 417.78515625 98.5625 417.78515625Z" fill="#F3F4F6" />
     <path d="M140.984375 465.0V414.5859375H164.5390625V417.78515625H144.46484375V438.0H163.09765625V441.1640625H144.46484375V461.8359375H165.69921875V465.0Z" fill="#F3F4F6" />

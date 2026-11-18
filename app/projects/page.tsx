@@ -93,7 +93,7 @@ export default function ProjectsPage() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch('/api/inquiry', {
+      await fetch('/api/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -101,18 +101,8 @@ export default function ProjectsPage() {
           source: 'Projects Showcase Page',
         }),
       });
-
-      const data = await res.json();
-      if (data.whatsappUrl) {
-        setWhatsappChatUrl(data.whatsappUrl);
-        try {
-          window.open(data.whatsappUrl, '_blank', 'noopener,noreferrer');
-        } catch (_) {}
-      }
     } catch (err) {
       console.error('Submission error:', err);
-      const fallbackText = `Hi Dev Hub! My name is ${consultationData.name} (${consultationData.phone}). Inquiring about ${consultationData.category}: ${consultationData.brief}`;
-      setWhatsappChatUrl(`https://wa.me/916395092413?text=${encodeURIComponent(fallbackText)}`);
     } finally {
       setIsSubmitting(false);
       setConsultationSubmitted(true);
@@ -399,29 +389,19 @@ export default function ProjectsPage() {
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#80202A]/20 text-[#d47883] flex items-center justify-center mx-auto text-2xl sm:text-3xl font-bold border border-[#80202A]/40">
                   ✓
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Inquiry Dispatched to Admin!</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Inquiry Sent Successfully!</h3>
                 <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. Your inquiry has been sent to our inbox at <span className="text-white font-mono">admindevvhubb@gmail.com</span>.
+                  Thank you, <span className="text-white font-semibold">{consultationData.name}</span>. Your message has been delivered to our team at <span className="text-white font-mono">admindevvhubb@gmail.com</span>. We will review your project and get in touch within 24 hours.
                 </p>
-                <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                  <a
-                    href={whatsappChatUrl || `https://wa.me/916395092413`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95 shadow-md"
-                  >
-                    <WhatsAppIcon size={16} />
-                    <span>Open WhatsApp Chat (+91 63950 92413) →</span>
-                  </a>
-
+                <div className="pt-3">
                   <button
                     onClick={() => {
                       setConsultationSubmitted(false);
                       setConsultationData({ name: '', phone: '', email: '', category: 'Online Store', brief: '' });
                     }}
-                    className="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs font-semibold uppercase tracking-wider transition-colors"
+                    className="px-6 py-2.5 rounded-full bg-[#80202A] hover:bg-[#942733] text-white text-xs font-semibold uppercase tracking-wider transition-colors"
                   >
-                    Submit Another Request
+                    Send Another Inquiry
                   </button>
                 </div>
               </div>
