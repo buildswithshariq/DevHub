@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description: "Dev Hub — Production-ready digital architectures across E-Commerce, Local Businesses, Small Business Software, and Autonomous AI Engines. Turnkey launch in 48 hours.",
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png?v=devhub3', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.svg?v=devhub3', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=devhub3', sizes: 'any' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon.ico?v=devhub3',
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png?v=devhub3', sizes: '180x180', type: 'image/png' },
     ],
   },
-  manifest: '/manifest.json',
+  manifest: '/manifest.json?v=devhub3',
   keywords: [
     "Dev Hub",
     "Engineering The Future",
@@ -56,11 +56,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark h-full antialiased" style={{ colorScheme: 'dark' }} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/icon-192.png?v=devhub3" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/favicon.svg?v=devhub3" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.ico?v=devhub3" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=devhub3" sizes="180x180" />
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png?v=devhub3" sizes="180x180" />
+        <link rel="manifest" href="/manifest.json?v=devhub3" />
+        <meta name="msapplication-TileImage" content="/icon-192.png?v=devhub3" />
+        <meta name="msapplication-TileColor" content="#80202A" />
         <meta name="theme-color" content="#80202A" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
