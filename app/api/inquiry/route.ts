@@ -19,6 +19,9 @@ export async function POST(req: Request) {
     });
 
     const targetEmail = 'admindevvhubb@gmail.com';
+    // User activated FormSubmit token
+    const formSubmitToken = process.env.FORMSUBMIT_TOKEN || '5cad712093b2a075287e42a8f95b132e';
+
     let emailDelivered = false;
     let serviceMessage = '';
 
@@ -84,12 +87,9 @@ export async function POST(req: Request) {
       }
     }
 
-    // Method B: FormSubmit Dispatch (Zero setup fallback)
+    // Method B: Activated FormSubmit Token Dispatch
     if (!emailDelivered) {
       try {
-        const origin = req.headers.get('origin') || 'https://devvhubb.vercel.app';
-        const referer = req.headers.get('referer') || 'https://devvhubb.vercel.app/';
-
         const emailPayload = {
           _subject: `⚡ New Dev Hub Lead: ${name} (${category || 'Project Inquiry'})`,
           _template: 'table',
@@ -103,13 +103,13 @@ export async function POST(req: Request) {
           Submitted_At_IST: submissionTime,
         };
 
-        const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+        const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${formSubmitToken}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            Origin: origin,
-            Referer: referer,
+            Origin: 'https://devhub.agency',
+            Referer: 'https://devhub.agency/',
           },
           body: JSON.stringify(emailPayload),
         });
@@ -117,16 +117,15 @@ export async function POST(req: Request) {
         const fsData = await formSubmitRes.json();
         if (fsData.success === 'true' || fsData.success === true) {
           emailDelivered = true;
-          serviceMessage = 'Email delivered via FormSubmit';
+          serviceMessage = 'Email delivered via FormSubmit token';
         } else {
-          serviceMessage = fsData.message || 'FormSubmit needs one-time email activation';
+          serviceMessage = fsData.message || 'FormSubmit response pending';
         }
       } catch (fsErr) {
-        console.error('FormSubmit error:', fsErr);
+        console.error('FormSubmit token error:', fsErr);
       }
     }
 
-    // Return success response to frontend without any WhatsApp redirect
     return NextResponse.json({
       success: true,
       message: 'Inquiry received successfully',
