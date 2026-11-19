@@ -19,7 +19,6 @@ export async function POST(req: Request) {
     });
 
     const targetEmail = 'admindevvhubb@gmail.com';
-    // User activated FormSubmit token
     const formSubmitToken = process.env.FORMSUBMIT_TOKEN || '5cad712093b2a075287e42a8f95b132e';
 
     let emailDelivered = false;
@@ -82,12 +81,12 @@ export async function POST(req: Request) {
           emailDelivered = true;
           serviceMessage = 'Email delivered via Resend';
         }
-      } catch (resendErr) {
+      } catch (resendErr: any) {
         console.error('Resend API error:', resendErr);
       }
     }
 
-    // Method B: Activated FormSubmit Token Dispatch
+    // Method B: Activated FormSubmit Token Dispatch with explicit Browser User-Agent & Origin
     if (!emailDelivered) {
       try {
         const emailPayload = {
@@ -108,27 +107,34 @@ export async function POST(req: Request) {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             Origin: 'https://devhub.agency',
             Referer: 'https://devhub.agency/',
           },
           body: JSON.stringify(emailPayload),
         });
 
-        const fsData = await formSubmitRes.json();
-        if (fsData.success === 'true' || fsData.success === true) {
-          emailDelivered = true;
-          serviceMessage = 'Email delivered via FormSubmit token';
-        } else {
-          serviceMessage = fsData.message || 'FormSubmit response pending';
+        const rawText = await formSubmitRes.text();
+        try {
+          const fsData = JSON.parse(rawText);
+          if (fsData.success === 'true' || fsData.success === true) {
+            emailDelivered = true;
+            serviceMessage = 'Email delivered via FormSubmit token';
+          } else {
+            serviceMessage = fsData.message || 'FormSubmit response pending';
+          }
+        } catch {
+          serviceMessage = `FormSubmit non-JSON response (${formSubmitRes.status}): ${rawText.slice(0, 100)}`;
         }
-      } catch (fsErr) {
+      } catch (fsErr: any) {
         console.error('FormSubmit token error:', fsErr);
+        serviceMessage = `FormSubmit exception: ${fsErr?.message || String(fsErr)}`;
       }
     }
 
     return NextResponse.json({
       success: true,
-      message: 'Inquiry received successfully',
+      message: 'Inquiry processed',
       emailDelivered,
       serviceMessage,
     });

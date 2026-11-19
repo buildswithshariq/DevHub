@@ -25,14 +25,38 @@ export default function HomePage() {
     setIsSubmitting(true);
 
     try {
-      await fetch('/api/inquiry', {
+      // 1. Direct browser submission to verified FormSubmit token (Runs from client's browser)
+      const clientFormPromise = fetch('https://formsubmit.co/ajax/5cad712093b2a075287e42a8f95b132e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `⚡ New Dev Hub Lead: ${consultationData.name} (${consultationData.category})`,
+          _template: 'table',
+          _captcha: 'false',
+          Client_Name: consultationData.name,
+          Phone_WhatsApp: consultationData.phone,
+          Email_Address: consultationData.email || 'Not provided',
+          Selected_Solution: consultationData.category,
+          Project_Notes: consultationData.brief || 'No notes provided',
+          Source_Page: 'Home Page Consultation Form',
+          Submitted_At: new Date().toLocaleString(),
+        }),
+      }).catch((err) => console.error('Client FormSubmit error:', err));
+
+      // 2. Also call backend /api/inquiry as server backup
+      const apiPromise = fetch('/api/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...consultationData,
           source: 'Home Page Consultation Form',
         }),
-      });
+      }).catch((err) => console.error('Server API error:', err));
+
+      await Promise.allSettled([clientFormPromise, apiPromise]);
     } catch (err) {
       console.error('Submission error:', err);
     } finally {
