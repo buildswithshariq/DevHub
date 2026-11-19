@@ -163,7 +163,7 @@ export default function Navbar() {
               <SparklesIcon size={16} className="text-[#9e2e3a]" />
               <span>Client Projects</span>
               <span className="ml-auto px-2 py-0.5 text-xs font-bold rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800">
-                8 Live
+                9 Live
               </span>
             </Link>
 

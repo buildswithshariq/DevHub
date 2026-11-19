@@ -60,7 +60,7 @@ export default function ProjectsPage() {
     {
       id: 'ai',
       label: 'AI & Chatbots',
-      count: AGENCY_PROJECTS.filter((p) => p.industryTag.includes('AI')).length,
+      count: AGENCY_PROJECTS.filter((p) => p.industryTag.includes('AI') || p.industryTag.includes('AGENCY')).length,
     },
   ];
 
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
       return AGENCY_PROJECTS.filter((p) => p.industryTag.includes('SOFTWARE'));
     }
     if (activeFilter === 'ai') {
-      return AGENCY_PROJECTS.filter((p) => p.industryTag.includes('AI'));
+      return AGENCY_PROJECTS.filter((p) => p.industryTag.includes('AI') || p.industryTag.includes('AGENCY'));
     }
     return AGENCY_PROJECTS;
   }, [activeFilter]);

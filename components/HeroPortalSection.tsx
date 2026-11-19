@@ -250,7 +250,7 @@ export default function HeroPortalSection({ onOpenConsultation }: HeroPortalSect
                     className="hover:text-[#c25360] transition-colors flex items-center gap-3 text-left group text-white"
                   >
                     <span className="text-[#80202A] text-sm">05.</span>
-                    <span>Client Projects &amp; Case Studies (8)</span>
+                    <span>Client Projects &amp; Case Studies (9)</span>
                   </Link>
                 </li>
               </ul>

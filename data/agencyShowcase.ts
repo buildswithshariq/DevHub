@@ -229,4 +229,18 @@ export const AGENCY_PROJECTS: ProjectShowcaseItem[] = [
     metrics: ['+78% Repeat Bookings', 'Zero Double Bookings', 'Google Maps #1 Search Rank'],
     techStack: ['Next.js 16', 'Google Calendar 2-Way Sync', 'Stripe', 'Twilio SMS Reminders'],
   },
+  {
+    id: 'prj-ai-agency-os',
+    name: 'AI Agency OS — Multi-Agent Marketing Platform',
+    headline: 'Autonomous Agency Operating System with 6 Specialist AI Agents',
+    description: 'Engineered an operating system for marketing agencies. Features 6 autonomous agents for market intelligence research, cold prospect sequencing, live signal tracking, instant competitive teardowns, and brand-aware campaign drafting.',
+    industryTag: 'AGENCY AI OS',
+    badge: 'Live Client Site',
+    previewImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    liveUrl: 'https://ai-agency-v2-jet.vercel.app',
+    clientName: 'Agentic Agency OS',
+    turnaround: '48 Hours',
+    metrics: ['6 Specialist AI Agents', 'Zero Tab Graveyard', '10x Research Speed'],
+    techStack: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Multi-Agent OS', 'Vercel Edge'],
+  },
 ];
